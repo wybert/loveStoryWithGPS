@@ -37,15 +37,15 @@ var url = "14.json";
 
 var line =[]
 
- var myArr = JSON.parse(xmlhttp.responseText);
-            myFunction(myArr);
+ // var myArr = JSON.parse(xmlhttp.responseText);
+ //            myFunction(myArr);
             
-// xmlhttp.onreadystatechange = function() {
-//         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-//             var myArr = JSON.parse(xmlhttp.responseText);
-//             myFunction(myArr);
+xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var myArr = JSON.parse(xmlhttp.responseText);
+            myFunction(myArr);
 
-//         }
+        }
 
 
 
@@ -64,6 +64,9 @@ var line =[]
            line.push( L.latLng(arr[i].lat,arr[i].lon))
 
         }
+
+        
+    add();
 
         // return line
     }
@@ -90,7 +93,7 @@ var line =[]
 // Start drawing the polyline.
 
 
-    add();
+    // add();
              
 // var oneline = line[0];
 
